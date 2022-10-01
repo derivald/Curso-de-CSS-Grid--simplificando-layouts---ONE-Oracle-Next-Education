@@ -12,18 +12,18 @@
 }
 /*5 define cores para identificar*/
 .cabecalho {
-    background: #00cc99;
+    /*background: #00cc99; retira o background por que já se pode ver*/
 
     grid-area: cabecalho;/*define esse e os abaixo|^*/
 }
  
 .conteudo {
-    background: #ff8080;
+   /*background: #ff8080;  retira o background por que já se pode ver*/ 
 
     grid-area: conteudo;
 }
 
 .rodape {
-   background:  #0099ff;
+  /*background:  #0099ff; retira o background por que já se pode ver*/ 
    grid-area: rodape;
 }

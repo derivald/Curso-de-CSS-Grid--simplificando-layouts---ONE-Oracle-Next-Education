@@ -1,0 +1,88 @@
+/*usando  flexbox*/
+.caixa{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+   
+}
+/*usando  css-grid*/
+.destaques{
+    display: grid;
+    grid-gap: .2rem;/*espaçamento entre os grids*/
+    grid-template-columns: 25% 25% 25% 25%;/*1 - 4 colunas de destaque, 100/4 25% cada coluna*/
+    grid-template-rows: 33.33% 33.33% 33.33%;/*2 - 3 linhas, 100/3 33.33% cada uma*/
+    height: calc(100vh - 50px);/*destaques 100vh total menos 50px do cabeçalho do style.css no  grid-template-rows:*/
+}
+.destaques__titulo{
+    background:rgba(0, 0, 0, .5);
+    color: #fdfdfd;
+    padding: .6rem;
+    text-align: center;
+    width: 100%;
+
+}
+.destaques__principal{
+    background-image: url("../img/fortnite.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   grid-column-start: 1;/*onde começa a coluna e termina final exclusivo*/
+   grid-column-end: 4;
+   grid-row-start:1;/*conde começa e termina a linha exclusivo*/
+   grid-row-end: 3;
+
+}
+.destaques__secundario:nth-child(2){/*herança da div acima/
+    /*short hands*/
+    background: url("../img/pubg.jpg") center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid-row: 1 / 1;
+   
+
+    
+}
+.destaques__secundario:nth-child(3){
+    /*cover ocupa todo tamanho*/
+    background: url("../img/slack.png") center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid: 2 / 2;
+
+}
+.destaques__secundario:nth-child(4){
+    background: url("../img/whatsapp.png") center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid-row: 3 / 3;
+}
+.destaques__secundario:nth-child(5){
+
+    background: url("../img/cs-go.jpg") center / cover no-repeat;
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+}
+.destaques__categorias{/*checar porque escreveu categoria*/
+    grid-column: 1 /3;
+    grid-row: 3 / 3;
+}
+/*usando flexbox abaixo*/
+.destaques__categorias___lista{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    
+}
+.destaques__categorias___item{
+    display: flex;
+    align-items: center;
+    background: #fdfdfd;
+    border-left: 5px solid transparent;
+    color: #333;
+    padding: 1rem;
+    width: 50%;
+
+
+}
+.destaques__categorias___link{
+    color: inherit;
+}
+
