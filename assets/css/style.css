@@ -8,22 +8,31 @@
     "rodape";
 
     grid-template-columns: auto;/*3 define tamanho colunas auto*/
-    grid-template-rows: 50px 100vh auto;/*4 define tamanho de 3 linhas cabecalho, conteudo, rodape 100vh*/
+    grid-template-rows: 50px auto auto;/*4 define tamanho de 3 linhas cabecalho, conteudo, rodape 100vh*/
 }
 /*5 define cores para identificar*/
 .cabecalho {
     /*background: #00cc99; retira o background por que já se pode ver*/
+    display: flex;
+    align-items: center;
 
     grid-area: cabecalho;/*define esse e os abaixo|^*/
+    padding: 0 2rem;
 }
  
 .conteudo {
    /*background: #ff8080;  retira o background por que já se pode ver*/ 
 
     grid-area: conteudo;
+    padding: 0 2rem;
 }
 
 .rodape {
   /*background:  #0099ff; retira o background por que já se pode ver*/ 
+  background: #fdfdfd;
+  color: #333333;
+  font-size: .8rem;
    grid-area: rodape;
+   padding: 1rem;
+   text-align: center;
 }
